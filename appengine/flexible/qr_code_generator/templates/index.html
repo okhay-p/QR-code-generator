@@ -18,10 +18,38 @@
     <form action="/" method="POST" autocomplete="off">
         <input type="text" name="link" id="link" placeholder="Insert a link here">
         <button type="submit">Generate</button>
+        <div class="design-menu">
+            <h3>Choose a design</h3>
+            <div>
+                <input type="radio" name="design" id="design-1" value="design-1" checked="checked">
+                <label for="design-1">Square</label>
+            </div>
+            <div>
+                <input type="radio" name="design" id="design-2" value="design-2">
+                <label for="design-2">Gapped Square</label>
+            </div>
+            <div>
+                <input type="radio" name="design" id="design-3" value="design-3">
+                <label for="design-3">Rounded</label>
+            </div>
+            <div>
+                <input type="radio" name="design" id="design-4" value="design-4">
+                <label for="design-4">Circle</label>
+            </div>
+            <div>
+                <input type="radio" name="design" id="design-5" value="design-5">
+                <label for="design-5">Vertical Bars</label>
+            </div>
+            <div>
+                <input type="radio" name="design" id="design-6" value="design-6">
+                <label for="design-6">Horizontal Bars</label>
+            </div>
+        </div>
     </form>
     <div class="generated">
-        <img src="{{data}}" alt="">
+        <img src="{{qr_img}}" alt="">
         <p>{{text}}</p>
+
     </div>
 </body>
 
@@ -69,7 +97,7 @@
         }
     }
 
-    form input {
+    form input[type="text"] {
         font-size: 1.2rem;
         padding: 0.5rem 1rem;
         width: clamp(20rem, 80%, 30rem);
@@ -99,5 +127,13 @@
     p {
         font-size: 1.2rem;
         color: rgb(37, 37, 37);
+    }
+
+    .design-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        align-items: start;
     }
 </style>
