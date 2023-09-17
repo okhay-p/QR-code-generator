@@ -21,7 +21,7 @@
     </form>
     <div class="generated">
         <img src="{{data}}" alt="">
-        <p>Your QR code is ready to go 🫡</p>
+        <p>{{text}}</p>
     </div>
 </body>
 
@@ -38,6 +38,7 @@
     body {
         margin: clamp(1rem, 5vw, 5rem);
         font-family: "Poppins", sans-serif;
+        background-color: rgb(255, 255, 255);
     }
 
     .title {
@@ -57,6 +58,10 @@
         gap: 2rem;
     }
 
+    input::placeholder {
+        color: rgb(37, 37, 37);
+    }
+
     @media (max-width: 768px) {
         form {
             flex-direction: column;
@@ -68,14 +73,15 @@
         font-size: 1.2rem;
         padding: 0.5rem 1rem;
         width: clamp(20rem, 80%, 30rem);
-        background: black;
-        color: white;
-        border: none;
+        background: rgba(43, 0, 36, 0.386);
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(43, 0, 36);
+        border-radius: 0.5rem;
     }
 
     form button {
         font-size: 1rem;
-        background: rgb(41, 64, 121);
+        background: rgb(43, 0, 36);
         border: none;
         color: white;
         padding: 1rem 1.5rem;
@@ -88,5 +94,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: rgb(37, 37, 37);
     }
 </style>

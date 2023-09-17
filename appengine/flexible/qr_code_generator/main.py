@@ -19,8 +19,9 @@ def generateQR():
     memory.seek(0)
 
     base64_img = "data:image/png;base64," + b64encode(memory.getvalue()).decode('ascii')
+    text = "QR Code Generated Successfully!😎"
 
-    return render_template('index.html', data=base64_img)
+    return render_template('index.html', data=base64_img, text=text)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
