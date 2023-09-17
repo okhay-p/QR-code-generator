@@ -64,6 +64,8 @@ def generateQR():
         img = qr.make_image(
             image_factory=StyledPilImage, module_drawer=HorizontalBarsDrawer()
         )
+    else:
+        img = qr.make_image()
 
 
     img.save(memory, "PNG")
